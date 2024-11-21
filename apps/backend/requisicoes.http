@@ -1,0 +1,86 @@
+GET http://localhost:3001/ping
+
+###
+GET http://localhost:3001/eventos
+
+###
+GET http://localhost:3001/eventos/evento-ferias-MT
+
+###
+GET http://localhost:3001/eventos/46c87b3b-b077-4a5b-b831-9da895f21cce
+
+
+###
+GET http://localhost:3001/eventos/validar/evento-fullstack-alteradoBD/46c87b3b-b077-4a5b-b831-9da895f21cce
+
+
+###
+POST http://localhost:3001/eventos/acessar
+Content-Type: application/json
+
+{
+    "id": "46c87b3b-b077-4a5b-b831-9da895f21cce",
+    "senha": "senha123"
+}
+
+###
+POST http://localhost:3001/eventos/evento-fullstack-alteradoBD/convidado
+Content-Type: application/json
+
+{
+    "id": "1f4afc83-a51e-4799-9b5c-f98474712a93",
+    "nome": "António Marques",
+    "email": "jana@correio.com",
+    "confirmado": true,
+    "possuiAcompanhantes": true,
+    "quantidadeDeAcompanhantes": 10
+}
+
+
+###
+POST http://localhost:3001/eventos
+Content-Type: application/json
+
+{
+    "id": "c3cdea84-ecae-4f37-9318-1d7b73de2fb7",
+    "alias": "evento-semana-formacao",
+    "senha": "csport",
+    "nome": "Evento Semana Formação DEV",
+    "data": "2025-12-31T23:00",
+    "local": "Fortaleza - CE",
+    "descricao": "Evento de tecnologia",
+    "imagem": "https://www.euax.com.br/wp-content/uploads/2024/08/eventos-de-tecnologia.webp",
+    "imagemBackground": "https://img.odcdn.com.br/wp-content/uploads/2022/05/evento-tecnologia.jpg",
+    "publicoEsperado": 150,
+    "convidados": [{
+        "id": "244f9af3-f3fa-47e0-960e-15ec8029dae8",
+        "nome": "António Marques",
+        "email": "jana@correio.com",
+        "confirmado": true,
+        "possuiAcompanhantes": true,
+        "quantidadeDeAcompanhantes": 10
+    }]
+}
+
+###
+POST http://localhost:3001/eventos
+Content-Type: application/json
+
+{
+    "alias": "evento-ferias-MT",
+    "senha": "csport22",
+    "nome": "Evento anual",
+    "data": "2024-11-23T01:00",
+    "local": "Fortaleza - CE",
+    "descricao": "Evento de Lazer",
+    "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJp15LcXmkmQmtLGCT1P4-ZVg3Ki6orcegA&s",
+    "imagemBackground": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOa9PLOKshAeorwir638eacohCEdmVaGl1dw&s",
+    "publicoEsperado": 100,
+    "convidados": [{
+        "nome": "Maria Teresa",
+        "email": "mt@correio.com",
+        "confirmado": true,
+        "possuiAcompanhantes": true,
+        "quantidadeDeAcompanhantes": 10
+    }]
+}
